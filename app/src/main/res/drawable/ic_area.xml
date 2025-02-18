@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Pin Shape -->
+    <path
+        android:fillColor="#D32F2F"
+        android:strokeWidth="2"
+        android:strokeColor="#000000"
+        android:pathData="M12,2C8,2 5,5 5,9c0,4.5 5.5,11 6.5,12.5 1,-1.5 6.5,-8 6.5,-12.5 0,-4 -3,-7 -7,-7z" />
+
+    <!-- Circle Inside the Pin -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,6a3,3 0 1,1 -0.001,6A3,3 0 0,1 12,6z"/>
+</vector>

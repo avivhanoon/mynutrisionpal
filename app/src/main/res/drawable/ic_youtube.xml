@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- YouTube Background (Red) -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M10,3h4c3.5,0 5.8,0.3 7.2,1.2 1.2,0.7 2,1.8 2.2,3.2 0.3,2.2 0.3,5.4 0,7.6 -0.2,1.4 -1,2.5 -2.2,3.2 -1.4,0.8 -3.7,1.2 -7.2,1.2h-4c-3.5,0 -5.8,-0.3 -7.2,-1.2 -1.2,-0.7 -2,-1.8 -2.2,-3.2 -0.3,-2.2 -0.3,-5.4 0,-7.6 0.2,-1.4 1,-2.5 2.2,-3.2 1.4,-0.8 3.7,-1.2 7.2,-1.2z" />
+
+    <!-- Play Button (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,8l6,4l-6,4z"/>
+</vector>

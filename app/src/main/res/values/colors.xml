@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_pink">#F1C6D9</color>
+    <color name="background_color">#FFFFFF</color>
+    <color name="colorPrimary">#F5A8B5</color>
+    <color name="text_color">#4F4F4F</color>
+    <color name="secondary_text_color">#A6A6A6</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_purple">#D6A8E2</color>
+    <color name="light_yellow">#FFF9C4</color>
+</resources>
