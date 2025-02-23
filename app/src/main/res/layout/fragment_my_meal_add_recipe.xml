@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MealsFragment.MyMealAddRecipeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/light_gray">
+
+        <TextView
+            android:id="@+id/tvAddMealTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_your_meal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etMealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/meal_name"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            app:layout_constraintTop_toBottomOf="@id/tvAddMealTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etMealCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/category1"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            app:layout_constraintTop_toBottomOf="@id/etMealName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etMealOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/meal_area"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            app:layout_constraintTop_toBottomOf="@id/etMealCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <EditText
+            android:id="@+id/etMealIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="top"
+            android:hint="@string/ingredients1"
+            android:padding="15dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etMealOrigin" />
+
+        <LinearLayout
+            android:id="@+id/llRecipeInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/etMealIngredients"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+
+            <EditText
+                android:id="@+id/etRecipeInstructions"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:hint="@string/recipe_instructions"
+                android:textSize="16sp"
+                android:gravity="top"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:maxLines="12"
+                android:layout_weight="1"
+                android:padding="12dp"/>
+
+            <ImageButton
+                android:id="@+id/btnRecordRecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:contentDescription="Record Recipe Instructions"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivSmallImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/nutrition_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/llRecipeInstructions"/>
+
+        <Button
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_photo"
+            android:textSize="16sp"
+            android:backgroundTint="@color/light_purple"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/ivSmallImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnSubmitMeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_meal"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/light_purple"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/btnAddPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

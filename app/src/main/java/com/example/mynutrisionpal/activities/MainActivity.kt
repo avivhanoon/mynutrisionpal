@@ -6,12 +6,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.mynutrisionpal.R
-import com.example.mynutrisionpal.db.MealDatabase
+import com.example.mynutrisionpal.db.Meal.MealDatabase
 import com.example.mynutrisionpal.viewModel.HomeViewModel
 import com.example.mynutrisionpal.viewModel.HomeViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    // Lazy view Model
     val viewModel: HomeViewModel by lazy {
         val mealDatabase = MealDatabase.getInstance(this)
         val homeViewModelProviderFactory = HomeViewModelFactory(mealDatabase)

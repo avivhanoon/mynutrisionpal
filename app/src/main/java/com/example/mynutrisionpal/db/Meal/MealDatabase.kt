@@ -1,4 +1,4 @@
-package com.example.mynutrisionpal.db
+package com.example.mynutrisionpal.db.Meal
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room

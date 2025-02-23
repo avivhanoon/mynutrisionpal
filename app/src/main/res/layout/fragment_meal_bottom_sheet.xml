@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.bottomsheet.MealBottomSheetFragment"
+    android:id="@+id/bottom_sheet">
+
+
+    <ImageView
+        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/meal_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/calorie_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_meal_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_category"
+        app:layout_constraintTop_toTopOf="@id/img_category">
+
+        <TextView
+            android:id="@+id/tv_meal_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_area"
+            android:text="Area"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/light_purple"/>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_meal"
+            android:text="Category"
+            android:layout_weight="1"
+            android:textColor="@color/light_purple"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_meal_name_in_btmsheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear_meal_info"
+        app:layout_constraintStart_toEndOf="@id/meal_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/meal_name"
+        android:textSize="18sp"
+        android:textColor="@color/light_purple"/>
+
+    <TextView
+        android:id="@+id/tv_read_more_btnsheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_meal_name_in_btmsheet"
+        app:layout_constraintStart_toEndOf="@id/meal_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/light_purple"
+        android:text="@string/read_more"
+        android:textSize="18sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

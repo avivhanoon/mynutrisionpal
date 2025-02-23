@@ -1,4 +1,4 @@
-package com.example.mynutrisionpal.db
+package com.example.mynutrisionpal.db.Meal
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 

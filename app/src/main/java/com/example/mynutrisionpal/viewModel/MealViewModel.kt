@@ -5,10 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mynutrisionpal.db.MealDatabase
+import com.example.mynutrisionpal.db.Meal.MealDatabase
 import com.example.mynutrisionpal.pojo.MealDetail
 import com.example.mynutrisionpal.pojo.MealsList
-import com.example.mynutrisionpal.pojo.RandomMealResponse
 import com.example.mynutrisionpal.retrofit.RetrofitInstance
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -53,5 +52,8 @@ class MealViewModel(
             mealDatabase.mealDao().delete(mealDetail)
         }
 
+    }
+    fun isMealSavedInDatabase(mealId: String): LiveData<Boolean> {
+        return mealDatabase.mealDao().exists(mealId)
     }
 }

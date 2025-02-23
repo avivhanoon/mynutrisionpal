@@ -8,16 +8,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.mynutrisionpal.R
 import com.example.mynutrisionpal.databinding.ActivityMealBinding
-import com.example.mynutrisionpal.db.MealDatabase
-import com.example.mynutrisionpal.fragments.HomeFragment
+import com.example.mynutrisionpal.db.Meal.MealDatabase
+import com.example.mynutrisionpal.fragments.HomeFragment.HomeFragment
 import com.example.mynutrisionpal.pojo.MealDetail
 import com.example.mynutrisionpal.viewModel.MealViewModel
 import com.example.mynutrisionpal.viewModel.MealViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MealActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMealBinding
     private lateinit var mealId: String
@@ -50,23 +51,28 @@ class MealActivity : AppCompatActivity() {
 
         onFavoriteClick()
     }
-
-    private fun onFavoriteClick(){
+    // Set the Click on the save button
+    private fun onFavoriteClick() {
         binding.btnSave.setOnClickListener {
-            mealToSave?.let {
-                mealMvvm.insertMeal(it)
-                Toast.makeText(this, "Meal Saved", Toast.LENGTH_SHORT).show()
+            mealToSave?.let { meal ->
+                mealMvvm.isMealSavedInDatabase(meal.idMeal).observe(this) { isSaved ->
+                    if (isSaved) {
+                        Toast.makeText(this, getString(R.string.meal_saved), Toast.LENGTH_SHORT).show()
+                    } else {
+                        mealMvvm.insertMeal(meal)
+                        Toast.makeText(this, getString(R.string.meal_saved), Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
         }
     }
-
+    // Set the youtube image click and opens a video of the process of the recipe
     private fun onYoutubeImageClick() {
         binding.imgYoutube.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeLink))
             startActivity(intent)
         }
     }
-
     private var mealToSave: MealDetail? = null
     private fun observeMealDetailsLiveData() {
         mealMvvm.observeMealDetailLiveData().observe(this, object : Observer<MealDetail>{
@@ -81,8 +87,8 @@ class MealActivity : AppCompatActivity() {
                         " ${meal.strMeasure14} ${meal.strIngredient14} \n ${meal.strMeasure15} ${meal.strIngredient15} " +
                         "\n ${meal.strMeasure16} ${meal.strIngredient16} \n ${meal.strMeasure17} ${meal.strIngredient17} \n ${meal.strMeasure18} ${meal.strIngredient18} \n" +
                         " ${meal.strMeasure19} ${meal.strIngredient19} \n ${meal.strMeasure20} ${meal.strIngredient20} \n "
-                binding.categoryTitle.text = "Category : ${meal.strCategory}"
-                binding.areaTitle.text = "Area : ${meal.strArea}"
+                binding.categoryTitle.text = getString(R.string.category, meal.strCategory)
+                binding.areaTitle.text = getString(R.string.area, meal.strArea)
                 binding.stepsText.text = meal.strInstructions
                 binding.ingredientsText.text = ingredients
                 youtubeLink = meal.strYoutube!!
@@ -119,6 +125,7 @@ class MealActivity : AppCompatActivity() {
         mealThumb = intent.getStringExtra(HomeFragment.MEAL_THUMB)!!
         mealName = intent.getStringExtra(HomeFragment.MEAL_NAME)!!
     }
+    // Loading when there is no connection or low connection
 
     private fun loadingCase(){
         binding.btnSave.visibility = View.INVISIBLE
@@ -134,6 +141,7 @@ class MealActivity : AppCompatActivity() {
         binding.imgYoutube.visibility = View.INVISIBLE
         binding.progressBar.visibility = View.VISIBLE
     }
+
 
     private fun onResponseCase() {
         binding.btnSave.visibility = View.VISIBLE

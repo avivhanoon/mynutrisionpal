@@ -1,4 +1,4 @@
-package com.example.mynutrisionpal.db
+package com.example.mynutrisionpal.db.Meal
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -19,4 +19,7 @@ interface MealDao {
 
     @Query("SELECT * FROM mealInformation")
     fun getAllMeals(): LiveData<List<MealDetail>>
+
+    @Query("SELECT EXISTS (SELECT 1 FROM mealInformation WHERE idMeal = :id)")
+    fun exists(id: String): LiveData<Boolean>
 }

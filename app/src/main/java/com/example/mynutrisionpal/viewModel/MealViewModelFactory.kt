@@ -2,7 +2,7 @@ package com.example.mynutrisionpal.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.mynutrisionpal.db.MealDatabase
+import com.example.mynutrisionpal.db.Meal.MealDatabase
 
 class MealViewModelFactory (
     private val mealDatabase: MealDatabase

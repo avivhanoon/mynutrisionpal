@@ -2,47 +2,79 @@
     <string name="app_name">MyNutritionPal</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
-    </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="number_of_meals">Number Of Meals: %1$s</string>
+    <string name="please_fill_in_all_fields">Please fill in all fields</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="invalid_email_or_password">Invalid email or password</string>
+    <string name="meal_saved">Meal Saved</string>
+    <string name="category">Category : %1$s</string>
+    <string name="area">Area : %1$s</string>
+    <string name="please_enter_a_valid_email_address">Please enter a valid email address</string>
+    <string name="password_must_be_at_least_6_characters">Password must be at least 6 characters</string>
+    <string name="user_with_this_email_already_exists">User with this email already exists</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="meal_deleted">Meal Deleted</string>
+    <string name="meal_info">Meal Info</string>
+    <string name="meal_added_successfully">Meal added successfully!</string>
+    <string name="meal_name_is_required">Meal name is required</string>
+    <string name="category_is_required">Category is required</string>
+    <string name="origin_is_required">Origin is required</string>
+    <string name="ingredients_are_required">Ingredients are required</string>
+    <string name="steps_are_required">Steps are required</string>
+    <string name="my_nutrision_pal">My Nutrition Pal</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Steps</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="explore_new_recipes">Explore New recipes</string>
+    <string name="home">Home</string>
+    <string name="what_would_you_like_to_eat">What would you like to eat</string>
+    <string name="our_popular_recipes">Our popular recipes</string>
+    <string name="categories">Categories</string>
+    <string name="read_more">Read more ...</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="my_meals">My Meals</string>
+    <string name="add_your_own_recipe">Add your own recipe!</string>
+    <string name="add_your_meal">Add Your Meal</string>
+    <string name="category1">Category</string>
+    <string name="meal_area">Meal Area</string>
+    <string name="ingredients1">Ingredients</string>
+    <string name="recipe_instructions">Recipe Instructions</string>
+    <string name="add_photo">Add photo</string>
+    <string name="submit_meal">Submit Meal</string>
+    <string name="search_meal">Search Meal</string>
+    <string name="type_meal_name">Type meal name ...</string>
+    <string name="meals">Meals</string>
+    <string name="favorite">Favorite</string>
+    <string name="speak_recipe_steps">Speak your recipe steps</string>
+    <string name="speech_recognition_not_supported" translatable="false">Speech recognition is not supported on this device</string>
+    <string name="error_loading_data">Failed to load data. Please check your internet connection.</string>
+    <string name="error_loading_categories">Failed to load categories</string>
+    <string name="error_loading_popular_items">Failed to load popular items</string>
+    <string name="error_loading_random_meal">Failed to load random meal</string>
+    <string name="error_opening_random_meal">Failed to open random meal details</string>
+    <string name="error_loading_image">Failed to load image. Check your internet connection.</string>
+    <string name="error_opening_category">Failed to open category</string>
+    <string name="error_showing_meal_details">Failed to show meal details</string>
+    <string name="no_internet_connection">No itnternet Connection</string>
+    <string name="offline_mode_message">You\'re offline. Some features may be limited.</string>
+    <string name="no_favorites_message">No favorite meals yet</string>
+    <string name="error_initializing">Error initializing application</string>
+    <string name="error_loading_view">Error loading view</string>
+    <string name="error_setup">Error setting up components</string>
+    <string name="error_showing_details">Error showing meal details</string>
+    <string name="error_opening_meal">Error opening meal details</string>
+    <string name="error_updating_list">Error updating meals list</string>
+    <string name="error_loading_favorites">Error loading favorites</string>
+    <string name="error_deleting_meal">Error deleting meal</string>
+    <string name="error_restoring_meal">Error restoring meal</string>
 </resources>

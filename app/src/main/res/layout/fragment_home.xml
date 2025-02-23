@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/myfont"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:textColor="@color/light_pink"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/myfont"
-                    android:text="What would you like to eat"
+                    android:text="@string/what_would_you_like_to_eat"
                     android:textColor="@color/light_pink"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/myfont"
-                    android:text="Our popular recipes"
+                    android:text="@string/our_popular_recipes"
                     android:textColor="@color/light_pink"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/myfont"
-                    android:text="Categories"
+                    android:text="@string/categories"
                     android:textColor="@color/light_pink"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -145,7 +145,7 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_category">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recviewCategories"
+                        android:id="@+id/rec_view_Categories"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="24dp"
@@ -154,5 +154,25 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
+    <!-- Add this near the top of your layout -->
+    <FrameLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/error_loading_data"
+            android:textAlignment="center" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

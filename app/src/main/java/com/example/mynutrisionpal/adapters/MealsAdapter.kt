@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mynutrisionpal.pojo.MealDetail
-import com.example.mynutrisionpal.databinding.FavMealCardBinding
 import com.example.mynutrisionpal.databinding.MealItemBinding
 
-class FavoriteMealAdapter : RecyclerView.Adapter<FavoriteMealAdapter.FavoritesMealsViewHolder>() {
+class MealsAdapter : RecyclerView.Adapter<MealsAdapter.FavoritesMealsViewHolder>() {
+
+    lateinit var onItemClick:((MealDetail)-> Unit)
+    lateinit var onLongItemClick: ((MealDetail) -> Unit)
 
     inner class FavoritesMealsViewHolder(val binding: MealItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -31,12 +33,18 @@ class FavoriteMealAdapter : RecyclerView.Adapter<FavoriteMealAdapter.FavoritesMe
                 LayoutInflater.from(parent.context), parent, false
             )
         )
-
     }
     override fun onBindViewHolder(holder: FavoritesMealsViewHolder, position: Int) {
         val meal = differ.currentList[position]
         Glide.with(holder.itemView).load(meal.strMealThumb).into(holder.binding.mealImage)
         holder.binding.mealName.text = meal.strMeal
+
+        holder.itemView.setOnClickListener{
+            onItemClick.invoke(differ.currentList[position])
+        }
+        holder.itemView.setOnLongClickListener {
+            true
+        }
     }
 
     override fun getItemCount(): Int {

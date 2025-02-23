@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:elevation="2dp">
+
+
+    <ImageView
+        android:id="@+id/ivMealImage"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:src="@drawable/nutrition_logo"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvMealName"
+        android:layout_marginBottom="8dp"/>
+
+
+    <TextView
+        android:id="@+id/tvMealName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Meal Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMealImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="4dp"/>
+
+
+    <TextView
+        android:id="@+id/tvMealCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMealName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+
+    <TextView
+        android:id="@+id/tvMealArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Short description of the recipe"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMealCategory"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

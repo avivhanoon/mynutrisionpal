@@ -7,17 +7,47 @@
 
     <fragment
         android:id="@+id/mealsFragment"
-        android:name="com.example.mynutrisionpal.fragments.MealsFragment"
+        android:name="com.example.mynutrisionpal.fragments.MealsFragment.MealsFragment"
         android:label="fragment_meals"
-        tools:layout="@layout/fragment_meals" />
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_myMealAddRecipeFragment"
+            app:destination="@id/myMealAddRecipeFragment" />
+        <action
+            android:id="@+id/action_mealsFragment_to_myMealDetailFragment"
+            app:destination="@id/myMealDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.example.mynutrisionpal.fragments.FavoriteFragment"
+        android:name="com.example.mynutrisionpal.fragments.FavoriteFragment.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/homeFragment2"
-        android:name="com.example.mynutrisionpal.fragments.HomeFragment"
+        android:name="com.example.mynutrisionpal.fragments.HomeFragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.mynutrisionpal.fragments.HomeFragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/myMealAddRecipeFragment"
+        android:name="com.example.mynutrisionpal.fragments.MealsFragment.MyMealAddRecipeFragment"
+        android:label="fragment_my_meal_add_recipe"
+        tools:layout="@layout/fragment_my_meal_add_recipe" >
+        <action
+            android:id="@+id/action_myMealAddRecipeFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myMealDetailFragment"
+        android:name="com.example.mynutrisionpal.fragments.MealsFragment.MyMealDetailFragment"
+        android:label="fragment_my_meal_detail"
+        tools:layout="@layout/fragment_my_meal_detail" />
 </navigation>
