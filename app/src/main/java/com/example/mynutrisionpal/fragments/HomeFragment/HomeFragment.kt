@@ -77,7 +77,6 @@ class HomeFragment : Fragment() {
     private fun loadData() {
         try {
             // Load random meal
-            viewModel.getRandomMeal()
             observerRandomMeal()
 
             // Load popular items

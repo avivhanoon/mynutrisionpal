@@ -19,7 +19,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-@HiltViewModel
 class HomeViewModel(
     private val mealDatabase: MealDatabase
 ): ViewModel() {
@@ -27,7 +26,7 @@ class HomeViewModel(
     private var popularItemsLiveDate = MutableLiveData<List<MealsByArea>>()
     private var categoriesLiveData = MutableLiveData<List<Category>>()
     private var favoritesMealsLiveData = mealDatabase.mealDao().getAllMeals()
-    private var bottomSheemLiveData = MutableLiveData<MealDetail>()
+    private var bottomSheetLiveData = MutableLiveData<MealDetail>()
     private val searchMealLiveData = MutableLiveData<List<MealDetail>>()
 
     init {
@@ -81,7 +80,7 @@ class HomeViewModel(
             override fun onResponse(call: Call<MealsList>, response: Response<MealsList>) {
                 val meal = response.body()?.meals?.first()
                 meal?.let { meal ->
-                    bottomSheemLiveData.postValue(meal)
+                    bottomSheetLiveData.postValue(meal)
                 }
             }
 
@@ -133,7 +132,7 @@ class HomeViewModel(
     fun observeFavoritesLiveData(): LiveData<List<MealDetail>>{
         return favoritesMealsLiveData
     }
-    fun observeBottomSheetMeal(): LiveData<MealDetail> = bottomSheemLiveData
+    fun observeBottomSheetMeal(): LiveData<MealDetail> = bottomSheetLiveData
 }
 
 
